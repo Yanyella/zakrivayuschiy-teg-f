@@ -10,7 +10,6 @@
     --font-weight-text: 400;
     --font-weight-title: 700;
     --font-size: 18px;
-    --border: 2px solid #000000; 
     --padding-label-right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
     --text-uppercase: uppercase;
     --text-lowercase: lowercase;
@@ -20,4 +19,5 @@
     --heart-accent-color: #FF0000;
     --padding-label-top: 25px;
     --padding-header: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) clamp(0rem, -2.6518rem + 11.3146vw, 7.53125rem);
+    --border: 2px solid #000000;
 }
