@@ -305,7 +305,7 @@
   
   post {
     font-family: 'ScienceGothic-Variable', sans-serif;
-  } 
+  }
 }
 
 @supports (text-stroke: 1px #FFF) {
