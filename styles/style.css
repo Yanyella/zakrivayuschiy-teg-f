@@ -108,7 +108,7 @@
   color: rgba(0, 0, 0, 0.5);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  -webkit-text-stroke: 1px #FFF; 
+  -webkit-text-stroke: 1px #FFF;
 }
 
 .card__post {
@@ -304,15 +304,16 @@
 @supports (font-variation-settings: normal) {
   
   post {
-    font-family: 'ScienceGothic-Variable', sans-serif; 
-  }
-  
+    font-family: 'ScienceGothic-Variable', sans-serif;
+  } 
 }
 
 @supports (text-stroke: 1px #FFF) {
+
   .card__img-lable {
     -webkit-text-stroke: 1px #FFF;
-}
+  }
+
 }
 
 @media (width <= 375px) {
