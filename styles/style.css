@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* фон зафиксирован */
   font-variation-settings: 'wght' var(--font-weight-text) var(--font-weight-title);
   color: var(--color);
   background: var(--bg-gradient, repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), 
@@ -39,7 +39,7 @@
 }
 
 .header__title {
-  font-family: var(--second-family, 'Press Start 2P'), sans-serif;
+  font-family: var(--second-family, fantasy, sans-serif);
   font-size: var(--font-title, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   font-weight: var(--font-weight, 400);
   text-transform: var(--text-uppercase, uppercase);
@@ -47,10 +47,10 @@
 }
 
 .header__subtitle {
-  font-family: var(--second-family, 'Press Start 2P'), sans-serif;
+  font-family: var(--second-family, fantasy, sans-serif);
   font-size: var(--font-subtitle, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   font-weight: var(--font-weight-text, 400);
-  text-transform: var(--text-uppercase, uppercase);;
+  text-transform: var(--text-uppercase, uppercase);
 }
 
 /* конец стилизации блока header */
@@ -71,10 +71,10 @@
 }
 
 .card__title {
-  font-family: var(--main-family), sans-serif;
+  font-family: var(--main-family, sans-serif);
   font-variation-settings: 'wght' var(--font-weight-title, 700);
   font-size: var(--font-size, 18px);
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-bottom: var(--border, 2px solid #000000);
 }
 
@@ -100,7 +100,7 @@
   position: absolute;
   top: var(--padding-label-top, 25px);
   right: var(--padding-label-right, clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem));
-  font-family: var(--second-family, 'Press Start 2P');
+  font-family: var(--second-family, fantasy, sans-serif);
   font-weight: var(--font-weight, 400);
   font-size: 14px;
   line-height: 87.5%;
@@ -108,15 +108,14 @@
   color: rgba(0, 0, 0, 0.5);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  -webkit-text-stroke: 1px #FFF;
 }
 
 .card__post {
   display: flex;
   flex-direction: column;
-  font-family: var(--main-family, Inter-Variable), sans-serif;
+  font-family: var(--main-family, sans-serif);
   font-size: var(--font-size, 18px);
-  line-height: 117%;
+  line-height: 118.5%;
   font-variation-settings: 'wght' var(--font-weight-text, 400);
   gap: 25px;
   border-top: var(--border, 2px solid #000000);
@@ -135,9 +134,9 @@
 
 .card__button-block {
   display: flex;
-  gap: 5px;
+  gap: 3px;
   justify-content: end;
-  align-items: center;
+  max-block-size: 39px;
 }
 
 .button {
@@ -145,12 +144,12 @@
   background: var(--bg-color, #fff);
   border: var(--border, 2px solid #000000);
   color:#fff;
-  font-family: var(--second-family, 'Press Start 2P'), sans-serif;
+  font-family: var(--second-family, fantasy, sans-serif);
   font-variation-settings: 'wght' var(--font-weight-text, 400);
   font-size: 14px;
   line-height: 90%;
-  transition: 0.5s ease-in-out;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button__floppy {
@@ -166,11 +165,11 @@
   inset: 0;
   z-index: 1;
   background: #000000;
-  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
   inline-size: 100%;
   block-size: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 .button:hover::after {
@@ -189,7 +188,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 #000;
-  transition: 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -207,6 +205,7 @@
   background-color: transparent;
   min-height: 38px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -262,16 +261,14 @@
 }
 
 .modal-window[open] {
-  padding: 30px;
+  padding: 28px;
   max-inline-size: 353px;
-  max-block-size: 191px;
   border: var(--border);
   display: flex;
-  gap: 30px;
+  gap: 27px;
   flex-direction: column;
   justify-content: space-between;
   justify-self: center;
-  overflow-y: hidden;
 }
 
 .modal-window::backdrop {
@@ -283,20 +280,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-inline-size: 293px;
+  min-block-size: 38px;
   padding: 12.5px 132.5px;
 }
 
 .modal-window__block {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
 .modal-window__text {
-  font-family: var(--second-family, 'Press Start 2P');
+  font-family: var(--second-family, fantasy, sans-serif);
   font-size: 14px;
   font-weight: var(--font-weight-text, 400);
   line-height: 21px;
   text-transform: var(--text-uppercase, uppercase);
+}
+
+.button__floppy {
+  width: 21px;
+  height: 21px;
 }
 
 /* конец стилизации блока main */
@@ -312,6 +316,7 @@
 
   .card__img-lable {
     -webkit-text-stroke: 1px #FFF;
+    text-shadow: none;
   }
 
 }
@@ -334,6 +339,11 @@
 
   .button-footer {
     flex-direction: column;
-    padding: 15px 20px 15.5px 19.5px;
+    padding: 17.5px 18px 17.5px 18px;
   }
+
+  .button__floppy {
+    width: 28px;
+    height: 28px;
+  }  
 }
