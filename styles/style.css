@@ -153,6 +153,8 @@
 }
 
 .button__floppy {
+  width: 21px;
+  height: 21px;
   display: block;
   position: relative;
   z-index: 2;
@@ -298,11 +300,6 @@
   text-transform: var(--text-uppercase, uppercase);
 }
 
-.button__floppy {
-  width: 21px;
-  height: 21px;
-}
-
 /* конец стилизации блока main */
 
 @supports (font-variation-settings: normal) {
@@ -337,13 +334,13 @@
     padding: 25px 30px 25px 25px;
   }
 
+  .button__floppy {
+    width: 28px;
+    height: 28px;
+  }
+
   .button-footer {
     flex-direction: column;
     padding: 17.5px 18px 17.5px 18px;
   }
-
-  .button__floppy {
-    width: 28px;
-    height: 28px;
-  }  
 }
