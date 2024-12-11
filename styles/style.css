@@ -19,7 +19,7 @@
   background-attachment: fixed; /* фон зафиксирован */
   font-variation-settings: 'wght' var(--font-weight-text) var(--font-weight-title);
   color: var(--color);
-  background: var(--bg-gradient, repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), 
+  background-image: var(--bg-gradient, repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px), 
   repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7, #1a1a1a));
   margin: 0 auto;
   max-inline-size: 700px;
@@ -105,7 +105,7 @@
   font-size: 14px;
   line-height: 87.5%;
   text-decoration-skip-ink: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0);
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }
@@ -136,7 +136,6 @@
   display: flex;
   gap: 3px;
   justify-content: end;
-  max-block-size: 39px;
 }
 
 .button {
@@ -207,7 +206,7 @@
   background-color: transparent;
   min-height: 38px;
   cursor: pointer;
-  transition: fill 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -263,8 +262,8 @@
 }
 
 .modal-window[open] {
-  padding: 28px;
   max-inline-size: 353px;
+  padding: 28px 30px;
   border: var(--border);
   display: flex;
   gap: 27px;
@@ -282,14 +281,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-inline-size: 293px;
-  min-block-size: 38px;
-  padding: 12.5px 132.5px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
 }
 
 .modal-window__block {
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
 .modal-window__text {
@@ -298,6 +296,10 @@
   font-weight: var(--font-weight-text, 400);
   line-height: 21px;
   text-transform: var(--text-uppercase, uppercase);
+}
+
+.modal-floppy {
+  align-self: center;
 }
 
 /* конец стилизации блока main */
@@ -341,11 +343,16 @@
 
   .button-footer {
     flex-direction: column;
-    padding: 14px 18px;
+    padding: 15px 18px;
+  }
+
+  .modal-window__block {
+    gap: 18px;
   }
 
   .modal-window[open] {
     max-inline-size: 341px;
-    padding: 38px 14px;
+    padding: 28px 40px;
   }
+
 }
